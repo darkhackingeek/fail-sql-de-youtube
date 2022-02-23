@@ -1,0 +1,30 @@
+[20:59:50] [INFO] testing connection to the target URL
+you have not declared cookie(s), while server wants to set its own ('CONSENT=PENDING+458;YSC=1iox5onRf4k'). Do you want to use those [Y/n] y
+[21:00:09] [INFO] checking if the target is protected by some kind of WAF/IPS
+[21:00:12] [WARNING] reflective value(s) found and filtering out
+[21:00:13] [INFO] testing if the target URL content is stable
+[21:00:15] [WARNING] target URL content is not stable (i.e. content differs). sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison'
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] c
+[21:00:22] [INFO] testing if GET parameter 'v' is dynamic
+[21:00:25] [INFO] GET parameter 'v' appears to be dynamic
+[21:00:28] [WARNING] heuristic (basic) test shows that GET parameter 'v' might not be injectable
+[21:00:36] [INFO] testing for SQL injection on GET parameter 'v'
+[21:00:37] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[21:01:25] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+[21:01:29] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[21:01:36] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+[21:01:45] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+[21:01:53] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+[21:02:03] [INFO] testing 'Generic inline queries'
+[21:02:04] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+[21:02:04] [CRITICAL] considerable lagging has been detected in connection response(s). Please use as high value for option '--time-sec' as possible (e.g. 10 or more)
+[21:02:07] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+[21:02:11] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+[21:02:15] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+[21:02:20] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+[21:02:24] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+[21:02:29] [INFO] testing 'Oracle AND time-based blind'
+it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] y
+[21:03:05] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+[21:03:28] [WARNING] GET parameter 'v' does not seem to be injectable
+[21:03:28] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests. If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could try to use option '--tamper' (e.g. '--tamper=space2comment') and/or switch '--random-agent
